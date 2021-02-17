@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Bouncing Ball</title>
+  <style>
+    #ball-animation {
+      box-sizing: border-box;
+      background-color: #ff0b0b;
+      animation: 1.88s infinite normal bounce;
+      animation-timing-function: linear;
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      transform-origin: bottom;
+      border-radius: 50px;
+      padding: 50px;
+    }
+
+    #ball-shine {
+      box-sizing: border-box;
+      background: linear-gradient(180deg, #ffffffff 0%, #ffffff00 100%);
+      animation: 1.88s infinite normal bounce;
+      animation-timing-function: linear;
+      position: fixed;
+      left: -10px;
+      top: -40px;
+      transform-origin: bottom;
+      border-radius: 60px;
+      padding: 60px;
+    }
+
+    #ball-shadow {
+      box-sizing: border-box;
+      box-shadow: 0px 100vh 40px #000;
+      animation: 1.88s infinite normal shadow;
+      animation-timing-function: linear;
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      transform-origin: bottom;
+      border-radius: 50px;
+      padding: 50px;
+    }
+
+    @keyframes bounce {
+      0% {
+        /* top */
+        transform: translate(10vw, -60vh) scale(0.9, 1.1) skewX(10deg);
+      }
+
+      15% {
+        /* going down */
+        transform: translate(22vw, 10vh) scale(0.7, 1.3) skewX(30deg);
+      }
+
+      24.9% {
+        /* touch down */
+        transform: translate(45vw, 80vh) scale(0.6, 1.4) skewX(40deg);
+      }
+
+      25% {
+        /* down */
+        transform: translate(45vw, 80vh) scale(1, 1) skewX(0deg);
+      }
+
+      26% {
+        /* squash */
+        transform: translate(46vw, 80vh) scale(1.60, 0.4)
+      }
+
+      26.1% {
+        /* un squash */
+        transform: translate(46.2vw, 80vh) scale(1.30, 0.7)
+      }
+
+      31% {
+        /* going up */
+        transform: translate(50.63vw, 64vh) scale(1.15, 0.85);
+      }
+
+      37.5% {
+        /* up */
+        transform: translate(56.25vw, 60vh) scale(0.9, 1.1);
+      }
+
+      43.75% {
+        /* going down */
+        transform: translate(61.876vw, 64vh) scale(1, 1);
+      }
+
+      51% {
+        /* down */
+        transform: translate(67.5vw, 80vh) scale(1, 1);
+      }
+
+      52% {
+        /* squash */
+        transform: translate(68vw, 80vh) scale(1.3, 0.70);
+      }
+
+      52.1% {
+        /* un squash */
+        transform: translate(68.1vw, 80vh) scale(1.15, 0.85);
+      }
+
+      54% {
+        /* going up */
+        transform: translate(69vw, 76.6vh) scale(1.05, 0.95);
+      }
+
+      60% {
+        /* up */
+        transform: translate(70.5vw, 75.2vh) scale(0.97, 1.03);
+      }
+
+      65% {
+        /* going down */
+        transform: translate(71.75vw, 76.6vh) scale(1, 1);
+      }
+
+      69% {
+        /* down */
+        transform: translate(73vw, 80vh) scale(1, 1);
+      }
+
+      71% {
+        /* down */
+        transform: translate(73.09vw, 80vh) scale(1, 1);
+      }
+
+      71.1% {
+        /* squash */
+        transform: translate(73.1vw, 80vh) scale(1.05, 0.95);
+      }
+
+      80% {
+        transform: translate(73.5vw, 80vh) scale(1, 1);
+      }
+
+      87.5% {
+        transform: translate(73.7vw, 80vh) scale(1, 1);
+      }
+
+      93.75% {
+        transform: translate(73.7vw, 80vh) scale(1, 1);
+      }
+
+      100% {
+        /* stop */
+        transform: translate(73.7vw, 80vh) scale(1, 1);
+      }
+    }
+
+    @keyframes shadow {
+      0% {
+        /* top */
+        transform: translate(10vw, 71vh) scale(0.9, 0.1)
+      }
+
+      12.8% {
+        /* going down */
+        transform: translate(22vw, 71vh) scale(0.7, 0.1)
+      }
+
+      24.9% {
+        /* touch down */
+        transform: translate(45vw, 71vh) scale(0.6, 0.1)
+      }
+
+      25% {
+        /* down */
+        transform: translate(45vw, 71vh) scale(1, 0.1)
+      }
+
+      26% {
+        /* squash */
+        transform: translate(46vw, 71vh) scale(1.60, 0.1)
+      }
+
+      31% {
+        /* going up */
+        transform: translate(50.63vw, 71vh) scale(1.15, 0.1);
+      }
+
+      37.5% {
+        /* up */
+        transform: translate(56.25vw, 71vh) scale(0.9, 0.1);
+      }
+
+      43.75% {
+        /* going down */
+        transform: translate(61.876vw, 71vh) scale(1, 0.1);
+      }
+
+      51% {
+        /* down */
+        transform: translate(67.5vw, 71vh) scale(1, 0.1);
+      }
+
+      52% {
+        /* squash */
+        transform: translate(68vw, 71vh) scale(1.3, 0.1);
+      }
+
+      54% {
+        /* going up */
+        transform: translate(69vw, 71vh) scale(1.05, 0.1);
+      }
+
+      60% {
+        /* up */
+        transform: translate(70.5vw, 71vh) scale(0.97, 0.1);
+      }
+
+      66% {
+        /* going down */
+        transform: translate(71.75vw, 71vh) scale(1, 0.1);
+      }
+
+      70% {
+        /* down */
+        transform: translate(73vw, 71vh) scale(1, 0.1);
+      }
+
+      74% {
+        /* down */
+        transform: translate(73.1vw, 71vh) scale(1.05, 0.1);
+      }
+
+      80% {
+        transform: translate(73.5vw, 71vh) scale(1, 0.1);
+      }
+
+      87.5% {
+        transform: translate(73.7vw, 71vh) scale(1, 0.1);
+      }
+
+      93.75% {
+        transform: translate(73.7vw, 71vh) scale(1, 0.1);
+      }
+
+      100% {
+        /* stop */
+        transform: translate(73.7vw, 71vh) scale(1, 0.1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <p id="ball-shadow"></p>
+  <p id="ball-animation"></p>
+  <p id="ball-shine"></p>
+</body>
+
+</html>
